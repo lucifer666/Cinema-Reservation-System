@@ -5,7 +5,10 @@ INSERT INTO Movies(movie_name, movie_rating) VALUES
 ("The Texas Chain Saw Massacre", "7.5"),
 ("Wrong Turn", "6.1"),
 ("The Silence of the Lambs", "8.1"),
-("Dead Silence", "8.1");
+("Dead Silence", "8.1"),
+("Star Wars: Episode VII - The Force Awakens", "8.1"),
+("Faster", "6.5"),
+("Jumper", "6.1");
 
 
 INSERT INTO Projections(movie_id, movie_type, movie_date, movie_time) VALUES
@@ -21,8 +24,14 @@ INSERT INTO Projections(movie_id, movie_type, movie_date, movie_time) VALUES
 (6, "2D", "2015-04-07", "21:30"),
 (6, "3D", "2015-04-08", "21:40"),
 (7, "2D", "2015-05-05", "20:00"),
-(7, "2D", "2015-05-06", "22:00");
-
+(7, "2D", "2015-05-06", "22:00"),
+(8, "3D", "2015-04-06", "21:00"),
+(8, "4DX", "2015-04-06", "13:00"),
+(9, "2D", "2015-05-05", "20:00"),
+(9, "2D", "2015-05-06", "22:00"),
+(10, "2D", "2015-05-03", "11:00"),
+(10, "2D", "2015-05-04", "22:00"),
+(10, "3D", "2015-05-05", "15:00");
 
 
 INSERT INTO Reservations(username, projection_id, row, col) VALUES

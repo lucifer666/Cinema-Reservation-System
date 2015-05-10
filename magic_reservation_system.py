@@ -1,4 +1,3 @@
-import sys
 import sqlite3
 
 class MagicReservationSystem:
@@ -13,12 +12,15 @@ class MagicReservationSystem:
 
 
     def show_movie_projections(self, movie_id):
-            projections = self.cursor.execute("SELECT projection_id, movie_date, movie_time, movie_type FROM Projections WHERE movie_id = ?", (movie_id,))
+            projections = self.cursor.execute("SELECT projection_id, movie_date, movie_time, movie_type FROM Projections \
+                WHERE movie_id = ?", (movie_id,))
             return projections
 
-    def show_movie_projections(self, movie_id, movie_date):
-        projections = self.cursor.execute("SELECT projection_id, movie_time, movie_type FROM Projections WHERE movie_id = ?, movie_date = ?", (movie_id,movie_date,))
+    def show_movie_projections_with_date(self, movie_id, movie_date):
+        projections = self.cursor.execute("SELECT projection_id, movie_time, movie_type FROM Projections \
+            WHERE movie_id = ? AND movie_date = ?", (movie_id, movie_date,))
         return projections
+
 
 
 
