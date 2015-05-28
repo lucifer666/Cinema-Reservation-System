@@ -1,7 +1,8 @@
 import sqlite3
 from settings import *
+from cinema_hall import CinemaHall
 
-connection = sqlite3.connect(database_name)
+connection = sqlite3.connect(database_cinema)
 cursor = connection.cursor()
 
 with open(sql_database, "r") as f:
@@ -11,3 +12,5 @@ with open(sql_database, "r") as f:
 with open(sql_fill_database, "r") as f:
     cursor.executescript(f.read())
     connection.commit()
+
+CinemaHall().create_hall()
